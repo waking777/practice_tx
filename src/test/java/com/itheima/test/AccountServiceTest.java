@@ -1,6 +1,7 @@
 package com.itheima.test;
 
 import com.itheima.service.IAccountService;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -12,4 +13,9 @@ public class AccountServiceTest {
 
     @Autowired
     private IAccountService as;
+
+    @Test
+    public void testTransfer(){
+        as.tranfer("abc","周冬雨",100f);
+    }
 }

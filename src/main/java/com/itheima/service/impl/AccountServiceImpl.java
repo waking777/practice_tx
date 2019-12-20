@@ -4,7 +4,7 @@ import com.itheima.dao.IAccountDao;
 import com.itheima.domain.Account;
 import com.itheima.service.IAccountService;
 
-public class IAccountServiceImpl implements IAccountService {
+public class AccountServiceImpl implements IAccountService {
 
     private IAccountDao accountDao;
 
@@ -23,6 +23,7 @@ public class IAccountServiceImpl implements IAccountService {
         source.setMoney(source.getMoney()-money);
         target.setMoney(target.getMoney()+money);
 
+//        int i = 1/0;
         accountDao.updateAccount(source);
         accountDao.updateAccount(target);
 
